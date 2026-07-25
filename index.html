@@ -483,6 +483,17 @@
   }
   @media (prefers-reduced-motion: reduce) {
     .rocket-fly { animation: none; opacity: 0.7; }
+    .monyet-sway { animation: none; }
+  }
+  @keyframes monyet-sway {
+    0%   { transform: rotate(-12deg); }
+    50%  { transform: rotate(12deg); }
+    100% { transform: rotate(-12deg); }
+  }
+  .monyet-sway {
+    animation: monyet-sway 1.4s ease-in-out infinite;
+    transform-origin: center bottom;
+    display: inline-block;
   }
 </style>
 </head>
@@ -710,7 +721,7 @@
       <span class="eyebrow" style="background:var(--ink); color:var(--yellow);">Tentang Penyelenggara</span>
       <div style="display:flex; align-items:center; gap:20px; max-width:none;">
         <h2 style="margin:0; flex:1 1 auto;">Siapa di Balik JHD26?</h2>
-        <img src="assets/monyet.webp" alt="" aria-hidden="true" style="height:90px; width:auto; flex-shrink:0; filter:drop-shadow(3px 4px 0 rgba(0,0,0,.12));">
+        <img src="assets/monyet.webp" alt="" aria-hidden="true" class="monyet-sway" style="height:90px; width:auto; flex-shrink:0; filter:drop-shadow(3px 4px 0 rgba(0,0,0,.12));">
       </div>
     </div>
     <div class="org-grid">
