@@ -420,6 +420,10 @@
 
   /* ---- SCHEDULE ---- */
   .sched-slot{display:flex; align-items:flex-start; gap:20px; padding:20px 0; border-bottom:1.5px solid rgba(35,31,32,.13);}
+  .sched-lineup{display:flex; flex-direction:column; gap:8px; margin-top:12px;}
+  .sched-lineup-item{display:flex; align-items:center; gap:10px; padding:6px 10px; border-left:3px solid var(--yellow); background:rgba(252,213,50,.1);}
+  .sched-perf-time{font-family:var(--font-mono); font-size:11px; font-weight:700; color:var(--blue); min-width:38px; flex-shrink:0;}
+  .sched-perf-name{font-weight:600; font-size:14px;}
   .sched-time{font-family:var(--font-mono); font-size:10.5px; font-weight:700; color:var(--blue); white-space:nowrap; min-width:130px; padding-top:5px; flex-shrink:0;}
   .sched-parallel{flex:1; display:grid; gap:10px; grid-template-columns:repeat(auto-fill, minmax(230px,1fr));}
   .sched-solo{flex:1;}
@@ -659,11 +663,10 @@
         <div class="sched-card"><div class="sched-meta"><span class="sched-badge diskusi">Diskusi</span><span class="sched-room">R1</span></div><div class="sched-org">SAFEnet</div><div class="sched-title">Ruang Temu: Ngudar Rasa lan Rembug Hak Digital yang Setara untuk Disabilitas</div></div>
         <div class="sched-card"><div class="sched-meta"><span class="sched-badge workshop">Workshop</span><span class="sched-room">R2</span></div><div class="sched-org">Humanis</div><div class="sched-title">Care as Continuity: Nurturing Solidarity Between Crises</div></div>
         <div class="sched-card"><div class="sched-meta"><span class="sched-badge diskusi">Diskusi</span><span class="sched-room">R3</span></div><div class="sched-org">LBH Yogyakarta</div><div class="sched-title">Know Your Rights: Menavigasi Pemahaman Legal Kebebasan Berekspresi di Tengah Pemberangusan Suara Rakyat Sipil</div></div>
-        <div class="sched-card"><div class="sched-meta"><span class="sched-badge workshop">Workshop</span><span class="sched-room">R4</span></div><div class="sched-org">Jagongan Hak Digital</div><div class="sched-title">Menyusun Maklumat Yogyakarta</div></div>
+        <div class="sched-card"><div class="sched-meta"><span class="sched-badge diskusi">Diskusi</span><span class="sched-room">R4</span></div><div class="sched-org">Rembuk Nusa</div><div class="sched-title">Dari Adat, Darurat ke Geliat</div></div>
+        <div class="sched-card"><div class="sched-meta"><span class="sched-badge workshop">Workshop</span><span class="sched-room">R5</span></div><div class="sched-org">Jagongan Hak Digital</div><div class="sched-title">Menyusun Maklumat Yogyakarta</div></div>
       </div></div>
-      <div class="sched-slot"><div class="sched-time">16.00 – 18.00 WIB</div><div class="sched-solo"><div class="sched-card"><div class="sched-meta"><span class="sched-badge film">Screening Film</span><span class="sched-room">Layar Tantjap</span></div></div></div></div>
-      <div class="sched-break">☕&ensp;Istirahat</div>
-      <div class="sched-slot"><div class="sched-time">19.00 – 21.00 WIB</div><div class="sched-solo"><div class="sched-card"><div class="sched-meta"><span class="sched-badge film">Screening Film</span><span class="sched-room">Layar Tantjap</span></div></div></div></div>
+      <div class="sched-slot"><div class="sched-time">17.30 – 22.30 WIB</div><div class="sched-solo"><div class="sched-card"><div class="sched-meta"><span class="sched-badge film">Screening Film</span><span class="sched-room">Layar Tantjap</span></div></div></div></div>
     </div>
 
     <div class="agenda-list" id="day-2">
@@ -684,9 +687,12 @@
         <div class="sched-card"><div class="sched-meta"><span class="sched-badge diskusi">Diskusi</span><span class="sched-room">R4</span></div><div class="sched-org">Digital Humanities Indonesia</div><div class="sched-title">Kedaulatan Data Rakyat: Mengubah Beban Kepatuhan UU PDP Menjadi Gerakan Collective Care Masyarakat Sipil</div></div>
         <div class="sched-card"><div class="sched-meta"><span class="sched-badge diskusi">Diskusi</span><span class="sched-room">R5</span></div><div class="sched-org">Combine Resource Institution</div><div class="sched-title">Solidarity Circle for Civil Society Movement</div></div>
       </div></div>
-      <div class="sched-slot"><div class="sched-time">16.30 – 18.00 WIB</div><div class="sched-solo"><div class="sched-card"><div class="sched-meta"><span class="sched-room">Panggung</span></div><div class="sched-title">Mimbar Bebas</div></div></div></div>
-      <div class="sched-break">☕&ensp;Istirahat</div>
-      <div class="sched-slot"><div class="sched-time">19.00 – 21.30 WIB</div><div class="sched-solo"><div class="sched-card"><div class="sched-meta"><span class="sched-badge seni">Artivisme</span><span class="sched-room">Panggung</span></div></div></div></div>
+      <div class="sched-slot"><div class="sched-time">18.30 – 21.30 WIB</div><div class="sched-solo"><div class="sched-card"><div class="sched-meta"><span class="sched-badge seni">Artivisme</span><span class="sched-room">Panggung</span></div><div class="sched-lineup">
+        <div class="sched-lineup-item"><span class="sched-perf-time">18.30</span><span class="sched-perf-name">Pantonim</span></div>
+        <div class="sched-lineup-item"><span class="sched-perf-time">19.15</span><span class="sched-perf-name">Ayikpradnya</span></div>
+        <div class="sched-lineup-item"><span class="sched-perf-time">20.15</span><span class="sched-perf-name">Fafa</span></div>
+        <div class="sched-lineup-item"><span class="sched-perf-time">21.00</span><span class="sched-perf-name">Spirit of Membesak</span></div>
+      </div></div></div></div>
       <div class="sched-slot"><div class="sched-time">21.30 – 22.00 WIB</div><div class="sched-solo"><div class="sched-card special"><div class="sched-title">Penutupan</div></div></div></div>
     </div>
   </div>
