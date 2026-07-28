@@ -492,13 +492,13 @@
     pointer-events: none;
   }
   @keyframes dino-walk {
-    0%     { transform: translateX(2000px); opacity: 0; }
+    0%     { transform: translateX(var(--dino-start, 900px)); opacity: 0; }
     4%     { opacity: 1; }
     82%    { transform: translateX(0); opacity: 1; }
     90%    { transform: translateX(0); opacity: 1; }
     94%    { transform: translateX(0); opacity: 0; }
-    94.01% { transform: translateX(2000px); opacity: 0; }
-    100%   { transform: translateX(2000px); opacity: 0; }
+    94.01% { transform: translateX(var(--dino-start, 900px)); opacity: 0; }
+    100%   { transform: translateX(var(--dino-start, 900px)); opacity: 0; }
   }
   .dino-walk {
     position: absolute;
@@ -890,9 +890,18 @@
     function update(){
       var h = sec.clientHeight;
       var dy = -(h + 100);
-      var dx = Math.round(dy * 0.577); // tan(30°) ≈ 0.577, arah kiri
+      var dx = Math.round(dy * 0.577);
       sec.style.setProperty('--rocket-dy', dy + 'px');
       sec.style.setProperty('--rocket-dx', dx + 'px');
+    }
+    update();
+    window.addEventListener('resize', update);
+  })();
+  (function(){
+    var track = document.querySelector('.dino-run-track');
+    if(!track) return;
+    function update(){
+      track.style.setProperty('--dino-start', (track.clientWidth + 90) + 'px');
     }
     update();
     window.addEventListener('resize', update);
