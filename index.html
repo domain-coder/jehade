@@ -484,22 +484,29 @@
     animation-delay: 0.8s;
     filter: drop-shadow(2px 3px 6px rgba(0,0,0,.25));
   }
+  .dino-run-track {
+    position: relative;
+    overflow: hidden;
+    height: 96px;
+    margin-top: -16px;
+    pointer-events: none;
+  }
   @keyframes dino-walk {
-    0%     { transform: translateX(-90px); opacity: 0; }
+    0%     { transform: translateX(2400px) scaleX(-1); opacity: 0; }
     3%     { opacity: 1; }
     94%    { opacity: 1; }
-    97%    { transform: translateX(2400px); opacity: 0; }
-    97.01% { transform: translateX(-90px); opacity: 0; }
-    100%   { transform: translateX(-90px); opacity: 0; }
+    97%    { transform: translateX(-90px) scaleX(-1); opacity: 0; }
+    97.01% { transform: translateX(2400px) scaleX(-1); opacity: 0; }
+    100%   { transform: translateX(2400px) scaleX(-1); opacity: 0; }
   }
   .dino-walk {
     position: absolute;
-    bottom: 28px;
+    bottom: 16px;
     left: 0;
     height: 72px;
     width: auto;
     pointer-events: none;
-    animation: dino-walk 11s linear infinite;
+    animation: dino-walk 18s linear infinite;
     animation-delay: 1.2s;
     filter: drop-shadow(3px 4px 0 rgba(0,0,0,.12));
   }
@@ -650,7 +657,7 @@
   </div>
 </section>
 
-<section class="block" id="jadwal" style="position:relative; overflow:hidden;">
+<section class="block" id="jadwal">
   <div class="wrap">
     <div class="block-head">
       <span class="eyebrow" style="background:var(--red); color:var(--white);">Jadwal</span>
@@ -711,7 +718,9 @@
       <div class="sched-slot"><div class="sched-time">21.30 – 22.00 WIB</div><div class="sched-solo"><div class="sched-card special"><div class="sched-title">Penutupan</div></div></div></div>
     </div>
   </div>
-  <img class="dino-walk" src="assets/dino-biru.webp" alt="" aria-hidden="true">
+  <div class="dino-run-track">
+    <img class="dino-walk" src="assets/dino-biru.webp" alt="" aria-hidden="true">
+  </div>
 </section>
 
 <section class="block" id="merchandise" style="background:var(--ink);">
