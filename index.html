@@ -486,24 +486,25 @@
   }
   .dino-run-track {
     position: relative;
+    flex: 1;
     overflow: hidden;
-    height: 96px;
-    margin-top: -16px;
+    height: 90px;
     pointer-events: none;
   }
   @keyframes dino-walk {
-    0%     { transform: translateX(2400px); opacity: 0; }
-    3%     { opacity: 1; }
-    94%    { opacity: 1; }
-    97%    { transform: translateX(-90px); opacity: 0; }
-    97.01% { transform: translateX(2400px); opacity: 0; }
-    100%   { transform: translateX(2400px); opacity: 0; }
+    0%     { transform: translateX(2000px); opacity: 0; }
+    4%     { opacity: 1; }
+    82%    { transform: translateX(0); opacity: 1; }
+    90%    { transform: translateX(0); opacity: 1; }
+    94%    { transform: translateX(0); opacity: 0; }
+    94.01% { transform: translateX(2000px); opacity: 0; }
+    100%   { transform: translateX(2000px); opacity: 0; }
   }
   .dino-walk {
     position: absolute;
-    bottom: 16px;
+    bottom: 0;
     left: 0;
-    height: 72px;
+    height: 80px;
     width: auto;
     pointer-events: none;
     animation: dino-walk 28s linear infinite;
@@ -662,7 +663,12 @@
     <div class="block-head">
       <span class="eyebrow" style="background:var(--red); color:var(--white);">Jadwal</span>
       <img class="mascot rocket-mascot" src="assets/mic-biru.webp" alt="" aria-hidden="true">
-      <h2>Susunan Acara</h2>
+      <div style="display:flex; align-items:center; gap:0; overflow:hidden;">
+        <h2 style="margin:0; flex-shrink:0;">Susunan Acara</h2>
+        <div class="dino-run-track">
+          <img class="dino-walk" src="assets/dino-biru.webp" alt="" aria-hidden="true">
+        </div>
+      </div>
     </div>
     <div class="day-tabs">
       <button class="day-tab active" onclick="showDay(1,this)">Hari 1 — Sabtu, 1 Agustus 2026</button>
@@ -717,9 +723,6 @@
       </div></div></div></div>
       <div class="sched-slot"><div class="sched-time">21.30 – 22.00 WIB</div><div class="sched-solo"><div class="sched-card special"><div class="sched-title">Penutupan</div></div></div></div>
     </div>
-  </div>
-  <div class="dino-run-track">
-    <img class="dino-walk" src="assets/dino-biru.webp" alt="" aria-hidden="true">
   </div>
 </section>
 
