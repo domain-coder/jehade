@@ -349,6 +349,31 @@
     display:inline-block; padding:8px 14px; border-radius:10px; margin-bottom:24px;
   }
 
+  /* ---------------- KOMITMEN BERSAMA ---------------- */
+  .komitmen-cols{display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:36px;}
+  .komitmen-col-head{font-family:var(--font-heading); font-weight:800; font-size:15px; text-transform:uppercase; letter-spacing:.06em; padding:10px 16px; border-radius:6px 6px 0 0; margin-bottom:0;}
+  .komitmen-col-head.do{background:var(--green); color:var(--ink);}
+  .komitmen-col-head.dont{background:var(--red); color:#fff;}
+  .komitmen-list{margin:0; padding:0; list-style:none; border:2.5px solid var(--ink); border-top:none; border-radius:0 0 6px 6px;}
+  .komitmen-list li{padding:10px 14px; font-size:14px; font-weight:500; border-bottom:1.5px solid rgba(35,31,32,.12); line-height:1.5; display:flex; gap:10px; align-items:flex-start;}
+  .komitmen-list li:last-child{border-bottom:none;}
+  .komitmen-list li::before{flex-shrink:0; font-weight:700; font-size:13px; margin-top:1px;}
+  .komitmen-list.do-list li::before{content:'✓'; color:var(--green);}
+  .komitmen-list.dont-list li::before{content:'✕'; color:var(--red);}
+  .komitmen-note{font-size:13px; font-weight:600; opacity:.75; margin:0 0 36px; font-style:italic;}
+  .aduan-box{background:var(--ink); color:var(--paper); border-radius:10px; padding:32px 36px; border:3px solid var(--ink);}
+  .aduan-box-title{font-family:var(--font-heading); font-weight:800; font-size:18px; text-transform:uppercase; color:var(--yellow); margin-bottom:14px; display:flex; align-items:center; gap:10px;}
+  .aduan-box-title::before{content:'⚑'; font-style:normal;}
+  .aduan-box p{font-size:14px; opacity:.88; line-height:1.65; margin:0 0 22px; max-width:72ch;}
+  .aduan-format{background:rgba(252,213,50,.12); border-left:4px solid var(--yellow); padding:10px 14px; border-radius:0 6px 6px 0; font-size:13px; font-family:var(--font-mono); margin-bottom:22px; line-height:1.6; opacity:.95;}
+  .aduan-contacts{display:flex; flex-wrap:wrap; gap:16px;}
+  .aduan-contact{background:rgba(255,255,255,.07); border:1.5px solid rgba(255,255,255,.15); border-radius:8px; padding:14px 18px; flex:1; min-width:220px;}
+  .aduan-contact-label{font-size:11px; font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.05em; opacity:.6; margin-bottom:6px;}
+  .aduan-contact-value{font-weight:700; font-size:15px; color:var(--yellow);}
+  @media(max-width:680px){
+    .komitmen-cols{grid-template-columns:1fr;}
+  }
+
   /* ---------------- FOOTER CTA ---------------- */
   .cta-final{background:var(--blue); text-align:center; padding:90px 0; border-bottom:3px solid var(--ink);}
   .cta-final h2{font-family:var(--font-title); font-weight:400; font-size:clamp(30px,5vw,52px); text-transform:uppercase; margin-bottom:16px;}
@@ -547,6 +572,7 @@
       <a href="#jadwal">Jadwal</a>
       <a href="#merchandise">Merchandise</a>
       <a href="#tentang">Tentang</a>
+      <a href="#komitmen">Komitmen</a>
     </div>
     <button class="menu-toggle" aria-label="Menu">☰</button>
   </div>
@@ -773,6 +799,64 @@
         <div class="org-body">
           <div class="org-name">SAFEnet – Southeast Asia Freedom of Expression Network</div>
           <p class="org-desc">SAFEnet adalah organisasi masyarakat sipil yang berfokus pada perlindungan hak digital dan kebebasan berekspresi di ruang digital. Sejak 2013, SAFEnet aktif melakukan pemantauan dan dokumentasi kasus pelanggaran hak digital, pendampingan korban, advokasi kebijakan, serta peningkatan kapasitas organisasi masyarakat sipil dan kelompok rentan. SAFEnet juga mendorong solidaritas di Asia Tenggara demi mewujudkan ranah digital yang bebas, aman dan setara.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="komitmen">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">Informasi Umum</span>
+      <h2>Komitmen Bersama</h2>
+      <p>Jagongan Hak Digital adalah ruang aman untuk belajar, berbagi, dan berjejaring yang dibangun atas dasar inklusivitas, kesetaraan, dan penghormatan terhadap keberagaman. Dengan mengikuti kegiatan ini, seluruh peserta, pembicara, panitia, media, dan mitra berkomitmen untuk menjaga nilai-nilai tersebut bersama.</p>
+    </div>
+
+    <div class="komitmen-cols">
+      <div>
+        <div class="komitmen-col-head do">DO</div>
+        <ul class="komitmen-list do-list">
+          <li>Menghormati setiap pengunjung Jagongan Hak Digital dan ciptakan ruang aman serta inklusif untuk semua.</li>
+          <li>Mendengarkan dengan empati dan berikan ruang bagi orang lain untuk berbicara dan berpendapat.</li>
+          <li>Menggunakan bahasa yang sopan, inklusif, dan mudah dipahami.</li>
+          <li>Menjaga kerahasiaan cerita atau informasi pribadi peserta.</li>
+          <li>Bertanya dengan niat belajar, bukan menghakimi.</li>
+          <li>Menjaga lingkungan dengan membawa botol minum (tumbler) dan tempat makan, juga membuang sampah pada tempatnya.</li>
+          <li>Menghormati privasi sesama pengunjung dengan tidak mengambil foto individu yang memakai tanda tidak bersedia didokumentasikan dan sesi diskusi/workshop yang tertutup.</li>
+          <li>Melaporkan jika mengalami atau menyaksikan tindakan yang membuat peserta lain merasa tidak aman dan nyaman. Laporan dapat dilakukan secara langsung kepada panitia atau mengirim aduan kepada penyelenggara.</li>
+          <li>Mengikuti sesi dan mata acara kegiatan dengan aktif dan partisipasif.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="komitmen-col-head dont">DON'TS</div>
+        <ul class="komitmen-list dont-list">
+          <li>Melanggar privasi dengan mengambil dan menyebarkan foto atau video individu yang menggunakan tanda tidak bersedia didokumentasikan tanpa persetujuan.</li>
+          <li>Membawa minuman beralkohol, narkotika, dan benda berbahaya seperti senjata tajam atau senjata api.</li>
+          <li>Mengganggu jalannya sesi atau mata acara lain melalui tindakan yang intimidatif hingga kekerasan.</li>
+          <li>Merekam atau menyiarkan sesi tanpa seizin pihak penyelenggara.</li>
+          <li>Membagikan informasi sensitif mengenai kegiatan tanpa seizin penyelenggara atau pihak pemilik informasi tersebut.</li>
+          <li>Melakukan ancaman fisik maupun digital kepada peserta, termasuk doksing, pengambilan data tanpa izin, atau penyalahgunaan dokumentasi acara.</li>
+          <li>Membuang sampah sembarangan.</li>
+          <li>Merusak fasilitas yang ada di lokasi kegiatan.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="komitmen-note">Panitia berhak untuk menindaklanjuti apabila terdapat kekerasan yang terjadi selama JHD 2026 berlangsung.</p>
+
+    <div class="aduan-box">
+      <div class="aduan-box-title">Informasi Aduan Anonim</div>
+      <p>Jika kamu atau orang di sekitarmu mengalami kejadian tidak diinginkan, seperti diskriminasi, pelecehan, intimidasi, atau perundungan dalam bentuk apa pun, kamu bisa melaporkan kepada Panitia Acara Jagongan Hak Digital.</p>
+      <div class="aduan-format">Format teks: <strong>Aduan JHD_[nama]_[asal lembaga/daerah]</strong> dan kronologi (pada badan teks atau enter)</div>
+      <div class="aduan-contacts">
+        <div class="aduan-contact">
+          <div class="aduan-contact-label">Helpline SAFEnet (Teks WhatsApp/Signal)</div>
+          <div class="aduan-contact-value">+628179323375</div>
+        </div>
+        <div class="aduan-contact">
+          <div class="aduan-contact-label">Email SAFEnet</div>
+          <div class="aduan-contact-value">info@safenet.or.id</div>
         </div>
       </div>
     </div>
