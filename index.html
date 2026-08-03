@@ -349,6 +349,21 @@
     display:inline-block; padding:8px 14px; border-radius:10px; margin-bottom:24px;
   }
 
+  /* ---------------- STATS BAND ---------------- */
+  .stats-band{background:var(--ink); color:var(--paper); padding:44px 0; border-bottom:3px solid var(--ink);}
+  .stats-band-label{font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em; opacity:.6; margin-bottom:28px; text-align:center;}
+  .stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:2px;}
+  .stat-item{display:flex; flex-direction:column; align-items:center; text-align:center; padding:24px 16px; border-right:1.5px solid rgba(255,255,255,.1);}
+  .stat-item:last-child{border-right:none;}
+  .stat-num{font-family:var(--font-heading); font-weight:800; font-size:clamp(44px,7vw,72px); color:var(--yellow); line-height:1; margin-bottom:8px; letter-spacing:-.02em;}
+  .stat-lbl{font-size:12px; font-weight:600; opacity:.7; text-transform:uppercase; letter-spacing:.05em; max-width:14ch; line-height:1.4;}
+  @media(max-width:620px){
+    .stats-grid{grid-template-columns:repeat(2,1fr);}
+    .stat-item{border-right:none; border-bottom:1.5px solid rgba(255,255,255,.1);}
+    .stat-item:nth-child(2n){border-bottom:1.5px solid rgba(255,255,255,.1);}
+    .stat-item:nth-last-child(-n+2){border-bottom:none;}
+  }
+
   /* ---------------- KOMITMEN BERSAMA ---------------- */
   .komitmen-cols{display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:36px;}
   .komitmen-col-head{font-family:var(--font-heading); font-weight:800; font-size:15px; text-transform:uppercase; letter-spacing:.06em; padding:10px 16px; border-radius:6px 6px 0 0; margin-bottom:0;}
@@ -619,8 +634,32 @@
   </div>
 
   <img class="mascot dino-mascot" src="assets/dino-mascot.webp" alt="" aria-hidden="true">
-  
+
 </header>
+
+<div class="stats-band">
+  <div class="wrap">
+    <div class="stats-band-label">Event ini sudah terselenggara dengan</div>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num">270</div>
+        <div class="stat-lbl">Total Orang Unik Check-in</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">359</div>
+        <div class="stat-lbl">Total Kunjungan Sesi</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">192</div>
+        <div class="stat-lbl">Peserta Terdaftar</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">572</div>
+        <div class="stat-lbl">Pengunjung Walk-in</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <section class="block" id="kegiatan" style="position:relative; overflow:hidden;">
