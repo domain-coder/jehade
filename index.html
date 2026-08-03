@@ -351,7 +351,8 @@
 
   /* ---------------- STATS BAND ---------------- */
   .stats-band{background:var(--ink); color:var(--paper); padding:44px 0; border-bottom:3px solid var(--ink);}
-  .stats-band-label{font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em; opacity:.6; margin-bottom:28px; text-align:center;}
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+  .stats-band-label{font-family:var(--font-heading); font-weight:800; font-size:clamp(18px,3vw,28px); text-transform:uppercase; letter-spacing:.04em; margin-bottom:28px; text-align:center; color:var(--yellow); animation:blink 1.2s step-end infinite;}
   .stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:2px;}
   .stat-item{display:flex; flex-direction:column; align-items:center; text-align:center; padding:24px 16px; border-right:1.5px solid rgba(255,255,255,.1);}
   .stat-item:last-child{border-right:none;}
@@ -639,7 +640,7 @@
 
 <div class="stats-band">
   <div class="wrap">
-    <div class="stats-band-label">Event ini sudah terselenggara dengan</div>
+    <div class="stats-band-label">Event ini sudah terselenggara dengan sukses.</div>
     <div class="stats-grid">
       <div class="stat-item">
         <div class="stat-num">270</div>
